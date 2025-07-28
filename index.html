@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossa História de Amor - 1 Ano Juntos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Floating Hearts Animation -->
+    <div class="floating-hearts">
+        <i class="fas fa-heart heart"></i>
+        <i class="fas fa-heart heart"></i>
+        <i class="fas fa-heart heart"></i>
+        <i class="fas fa-heart heart"></i>
+        <i class="fas fa-heart heart"></i>
+        <i class="fas fa-heart heart"></i>
+        <i class="fas fa-heart heart"></i>
+        <i class="fas fa-heart heart"></i>
+        <i class="fas fa-heart heart"></i>
+        <i class="fas fa-heart heart"></i>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-title">
+                <i class="fas fa-heart"></i>
+                Nossa História de Amor
+            </h1>
+            <div class="nav-menu">
+                <button class="nav-btn active" onclick="showSection('home')">
+                    <i class="fas fa-clock"></i>
+                    Início
+                </button>
+                <button class="nav-btn" onclick="showSection('gallery')">
+                    <i class="fas fa-camera"></i>
+                    Galeria
+                </button>
+                <button class="nav-btn" onclick="showSection('timeline')">
+                    <i class="fas fa-calendar"></i>
+                    Timeline
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="container">
+                <div class="hero-content">
+                    <h2 class="hero-title">💕 1 Ano Juntos 💕</h2>
+                    <p class="hero-description">
+                        Desde 28 de julho de 2023, nossa história de amor começou a ser escrita. 
+                        Cada dia ao seu lado é uma nova página repleta de carinho, risadas e momentos únicos.
+                    </p>
+                </div>
+
+                <!-- Counter -->
+                <div class="counter-card">
+                    <h3 class="counter-title">⏰ Tempo Juntos</h3>
+                    <div class="counter-grid">
+                        <div class="counter-item">
+                            <div class="counter-number" id="years">0</div>
+                            <div class="counter-label">Anos</div>
+                        </div>
+                        <div class="counter-item">
+                            <div class="counter-number" id="months">0</div>
+                            <div class="counter-label">Meses</div>
+                        </div>
+                        <div class="counter-item">
+                            <div class="counter-number" id="days">0</div>
+                            <div class="counter-label">Dias</div>
+                        </div>
+                        <div class="counter-item">
+                            <div class="counter-number" id="hours">0</div>
+                            <div class="counter-label">Horas</div>
+                        </div>
+                        <div class="counter-item">
+                            <div class="counter-number" id="minutes">0</div>
+                            <div class="counter-label">Minutos</div>
+                        </div>
+                        <div class="counter-item">
+                            <div class="counter-number" id="seconds">0</div>
+                            <div class="counter-label">Segundos</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Features Card -->
+                <div class="features-card">
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <i class="fas fa-sparkles feature-icon"></i>
+                            <h3 class="feature-title">Momentos Mágicos</h3>
+                            <p class="feature-description">Cada segundo ao seu lado é especial</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-heart feature-icon"></i>
+                            <h3 class="feature-title">Amor Verdadeiro</h3>
+                            <p class="feature-description">Um sentimento que cresce a cada dia</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-calendar feature-icon"></i>
+                            <h3 class="feature-title">Futuro Juntos</h3>
+                            <p class="feature-description">Muitas aventuras ainda nos esperam</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Love Message -->
+                <div class="love-message">
+                    <h3 class="message-title">💌 Uma Mensagem Especial</h3>
+                    <p class="message-text">
+                        "O amor não se vê com os olhos, mas com o coração. E meu coração escolheu você para ser minha companhia
+                        nesta jornada chamada vida. Obrigado(a) por fazer cada dia mais colorido e cheio de significado. Te amo
+                        hoje, amanhã e sempre! 💕"
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        📸 Nossa Galeria de Momentos
+                        <i class="fas fa-heart"></i>
+                    </h2>
+                    <p class="section-description">Cada foto conta uma parte da nossa história de amor</p>
+                </div>
+
+                <div class="gallery-controls">
+                    <button class="btn-primary" onclick="openAddPhotoModal()">
+                        <i class="fas fa-plus"></i>
+                        Adicionar Momento
+                    </button>
+                </div>
+
+                <div class="gallery-grid" id="galleryGrid">
+                    <!-- Photos will be dynamically added here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section id="timeline" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">
+                        📅 Nossa Timeline do Amor
+                        <i class="fas fa-heart"></i>
+                    </h2>
+                    <p class="section-description">Cada momento especial da nossa jornada juntos</p>
+                </div>
+
+                <div class="timeline-controls">
+                    <button class="btn-primary" onclick="openAddEventModal()">
+                        <i class="fas fa-plus"></i>
+                        Adicionar Momento
+                    </button>
+                </div>
+
+                <div class="timeline-container">
+                    <div class="timeline-line"></div>
+                    <div class="timeline-events" id="timelineEvents">
+                        <!-- Events will be dynamically added here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Add Photo Modal -->
+    <div id="addPhotoModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Adicionar Novo Momento</h3>
+                <button class="modal-close" onclick="closeAddPhotoModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-content">
+                        <i class="fas fa-image upload-icon"></i>
+                        <p>Arraste uma foto aqui ou</p>
+                        <div class="upload-buttons">
+                            <button type="button" class="btn-outline" onclick="document.getElementById('fileInput').click()">
+                                <i class="fas fa-upload"></i>
+                                Escolher Arquivo
+                            </button>
+                            <button type="button" class="btn-outline" onclick="openCamera()">
+                                <i class="fas fa-camera"></i>
+                                Tirar Foto
+                            </button>
+                        </div>
+                    </div>
+                    <div class="preview-container" id="previewContainer" style="display: none;">
+                        <img id="previewImage" alt="Preview">
+                        <button class="btn-outline" onclick="removePreview()">Remover Foto</button>
+                    </div>
+                </div>
+                <input type="file" id="fileInput" accept="image/*" style="display: none;">
+                <div class="form-grid">
+                    <input type="text" id="photoTitle" placeholder="Título do momento" class="form-input">
+                    <input type="date" id="photoDate" class="form-input">
+                </div>
+                <textarea id="photoDescription" placeholder="Descrição do momento..." class="form-textarea"></textarea>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-primary" onclick="addPhoto()">Adicionar</button>
+                <button class="btn-outline" onclick="closeAddPhotoModal()">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Event Modal -->
+    <div id="addEventModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Adicionar Novo Momento</h3>
+                <button class="modal-close" onclick="closeAddEventModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-grid">
+                    <input type="text" id="eventTitle" placeholder="Título do momento" class="form-input">
+                    <input type="date" id="eventDate" class="form-input">
+                </div>
+                <input type="text" id="eventLocation" placeholder="Local (opcional)" class="form-input">
+                <select id="eventType" class="form-select">
+                    <option value="memory">Memória</option>
+                    <option value="milestone">Marco Importante</option>
+                    <option value="date">Data Especial</option>
+                    <option value="future">Plano Futuro</option>
+                </select>
+                <textarea id="eventDescription" placeholder="Descrição do momento..." class="form-textarea"></textarea>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-primary" onclick="addEvent()">Adicionar</button>
+                <button class="btn-outline" onclick="closeAddEventModal()">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Camera Modal -->
+    <div id="cameraModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Tirar Foto</h3>
+                <button class="modal-close" onclick="closeCameraModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="camera-container">
+                    <video id="cameraVideo" autoplay playsinline></video>
+                    <canvas id="cameraCanvas" style="display: none;"></canvas>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-primary" onclick="capturePhoto()">
+                    <i class="fas fa-camera"></i>
+                    Capturar
+                </button>
+                <button class="btn-outline" onclick="closeCameraModal()">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
